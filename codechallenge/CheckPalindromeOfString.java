@@ -13,7 +13,9 @@ public class CheckPalindromeOfString {
 		 rev = rev+ result.charAt(i);
 	    }
 	    
-		if(result.equalsIgnoreCase(rev)) 
+	    checkPalindrome = result.equalsIgnoreCase(rev);
+	    System.out.println(checkPalindrome);
+	/*	if(result.equalsIgnoreCase(rev)) //this logic also passing
 		{
 		checkPalindrome = true;
 		System.out.println(checkPalindrome);	
@@ -21,6 +23,6 @@ public class CheckPalindromeOfString {
 	    }
 		else {
 			System.out.println(checkPalindrome);
-		}
+		} */
 
 } }

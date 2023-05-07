@@ -1,10 +1,10 @@
 package week2.day1;
 
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-
-public class DuplicateLead {
+public class EditLead {
 
 	public static void main(String[] args) {
 		ChromeDriver driver = new ChromeDriver();
@@ -20,8 +20,7 @@ public class DuplicateLead {
 		driver.findElement(By.id("createLeadForm_companyName")).sendKeys("Test Leaf");
 		driver.findElement(By.id("createLeadForm_firstName")).sendKeys("Nisha");
 		driver.findElement(By.id("createLeadForm_lastName")).sendKeys("Amul");
-		driver.findElement(By.id("createLeadForm_firstNameLocal")).sendKeys("Nisha");
-	
+		driver.findElement(By.id("createLeadForm_firstNameLocal")).sendKeys("Nisha");	
 		driver.findElement(By.id("createLeadForm_departmentName")).sendKeys("ABC");
 		driver.findElement(By.id("createLeadForm_description")).sendKeys("XYZ");
 		driver.findElement(By.id("createLeadForm_primaryEmail")).sendKeys("nisha123@gamil.com");
@@ -29,18 +28,11 @@ public class DuplicateLead {
 		stateValue.selectByVisibleText("New York");
 		driver.findElement(By.className("smallSubmit")).click();
 		
-		driver.findElement(By.partialLinkText("Duplicate Lead")).click();
-		driver.findElement(By.id("createLeadForm_companyName")).clear();
-		driver.findElement(By.id("createLeadForm_companyName")).sendKeys("Indium");
-		driver.findElement(By.id("createLeadForm_firstName")).clear();
-		driver.findElement(By.id("createLeadForm_firstName")).sendKeys("Nishandhini");
-
-		driver.findElement(By.className("smallSubmit")).click();
+		driver.findElement(By.partialLinkText("Edit")).click();
+		driver.findElement(By.id("updateLeadForm_description")).clear();
+		driver.findElement(By.id("updateLeadForm_importantNote")).sendKeys("Notes");
+		driver.findElement(By.xpath("//input[@value='Update']")).click();
 		System.out.println(driver.getTitle());
 		driver.close();
-		
-
-
-	}
-
+}
 }

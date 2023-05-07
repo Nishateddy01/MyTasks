@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class DuplicateLead {
+public class CreateLead {
 
 	public static void main(String[] args) {
 		ChromeDriver driver = new ChromeDriver();
@@ -28,19 +28,9 @@ public class DuplicateLead {
 		Select stateValue = new Select(driver.findElement(By.id("createLeadForm_generalStateProvinceGeoId")));
 		stateValue.selectByVisibleText("New York");
 		driver.findElement(By.className("smallSubmit")).click();
-		
-		driver.findElement(By.partialLinkText("Duplicate Lead")).click();
-		driver.findElement(By.id("createLeadForm_companyName")).clear();
-		driver.findElement(By.id("createLeadForm_companyName")).sendKeys("Indium");
-		driver.findElement(By.id("createLeadForm_firstName")).clear();
-		driver.findElement(By.id("createLeadForm_firstName")).sendKeys("Nishandhini");
-
-		driver.findElement(By.className("smallSubmit")).click();
 		System.out.println(driver.getTitle());
+
 		driver.close();
-		
-
-
 	}
 
 }

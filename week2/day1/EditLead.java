@@ -31,7 +31,7 @@ public class EditLead {
 		driver.findElement(By.partialLinkText("Edit")).click();
 		driver.findElement(By.id("updateLeadForm_description")).clear();
 		driver.findElement(By.id("updateLeadForm_importantNote")).sendKeys("Notes");
-		driver.findElement(By.xpath("//input[@value='Update']")).click();
+		driver.findElement(By.className("smallSubmit")).click();
 		System.out.println(driver.getTitle());
 		driver.close();
 }

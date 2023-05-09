@@ -11,6 +11,9 @@ public class LeafGroundForInput {
 	public static void main(String[] args) {
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("https://www.leafground.com/input.xhtml");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
 		driver.findElement(By.xpath("//input[contains(@id,'age')]")).sendKeys(Keys.ENTER);
 		WebElement errorMsg = driver.findElement(By.xpath("//span[contains(@id,'error-detail')]"));
 		Assert.assertEquals(true, errorMsg.isDisplayed());

@@ -16,7 +16,7 @@ public class LeafGroundForSelect {
 		Select selectValue = new Select(driver.findElement(By.xpath("//select[@class='ui-selectonemenu']")));
 		selectValue.selectByVisibleText("Selenium");
 		
-		driver.findElement(By.xpath("//label[contains(@id,'country_label')]")).click();
+		driver.findElement(By.xpath("//h5[text()='Choose your preferred country.']/following::label")).click();
 		driver.findElement(By.xpath("//li[text()='India']")).click();
 		Thread.sleep(1000);
 
@@ -34,7 +34,7 @@ public class LeafGroundForSelect {
 		driver.findElement(By.xpath("//label[text()='Select Values']")).click();
 		driver.findElement(By.xpath("//li[text()='Two']")).click();
 		
-		driver.close();
+		driver.quit();
 
 
 	}

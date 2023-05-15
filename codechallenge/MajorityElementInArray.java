@@ -24,10 +24,13 @@ public class MajorityElementInArray {
 	        } 
 		    }
 		if (max > arr.length/2)  {
-		    System.out.println ("Majority element in an array is "+arr[index]);  }
+		 System.out.println ("Majority element in an array is "+arr[index]);  }
 		    else {
 		    System.out.println ("No Majority Element");  }
-	       
+
+		       
 	}
 	
+
+
 }

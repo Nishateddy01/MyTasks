@@ -4,7 +4,7 @@ public class HappyNumber {
 	
 
 	public static void main(String[] args) {
-		int num = 82;
+		int num = 2;
 		int sum = 0;
 		int temp;
 		 while(sum!=1 && sum!=4)

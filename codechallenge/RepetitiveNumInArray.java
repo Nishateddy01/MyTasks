@@ -4,7 +4,7 @@ public class RepetitiveNumInArray {
 
 	public static void main(String[] args) {
 		int arr[] = {2,2,1}; 
-	    boolean repNum = false;
+			boolean duplicate=false;
 
 		for(int i=0; i<arr.length; i++)
 		{
@@ -12,13 +12,13 @@ public class RepetitiveNumInArray {
 		    {
 		        if ((arr[i] == arr[j])) 
 		        {
-		        	repNum = true;
+		        	duplicate = true;
 		        	break;
 		        }
 		    }
 
         }		    		
-		    System.out.println (repNum);  	       
+		    System.out.println (duplicate);  	       
 	}
 	}
 

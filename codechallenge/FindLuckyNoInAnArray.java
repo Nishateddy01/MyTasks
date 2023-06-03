@@ -9,6 +9,7 @@ public class FindLuckyNoInAnArray {
 	    for (int i = arr.length - 1; i >= 0; i--) {
 	    	count++;
 	        if (i == 0 || arr[i] != arr[i - 1]) {
+	        	
 	            if (count == arr[i]) {
 	                return count;
 	            }
